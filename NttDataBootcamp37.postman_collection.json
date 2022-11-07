@@ -1,0 +1,710 @@
+{
+	"info": {
+		"_postman_id": "315c6693-08ed-4eca-9ba6-d97c8e673142",
+		"name": "NttDataBootcamp37",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Yanki",
+			"item": [
+				{
+					"name": "Account",
+					"item": [
+						{
+							"name": "New Request",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n\r\n  \"customerDocument\" :\"45102576\",\r\n  \"customerDocumentTypeId\" :\"DNI\",\r\n  \"accountCelImei\":\"51578\",\r\n  \"accountEmail\":\"rogerhugo24@gmail.com\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8100/yankiAccount",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8100",
+									"path": [
+										"yankiAccount"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "New Request",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "\r\n{\r\n  \"accountCelImei\":\"2e258dp\",\r\n  \"accountEmail\":\"yngridjoan@gmail.com\"\r\n}\r\n\r\n",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8100/yankiAccount",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8100",
+									"path": [
+										"yankiAccount"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Balance",
+					"item": [
+						{
+							"name": "New Request",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n\r\n   \"accountId\":\"15646545\",\r\n   \"balanceAmmount\":20\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8101/yankiBalance",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8101",
+									"path": [
+										"yankiBalance"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Bootcoin",
+			"item": [
+				{
+					"name": "Customer",
+					"item": [
+						{
+							"name": "create",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n\r\n \t\"customerDocument\" :\"44531251\" ,\r\n\t\"documentTypeId\" : \"1\",\r\n\t\"customerName\" : \"Yngrid\",\r\n\t\"customerLastName\" : \"Yaya Calero\",\r\n\t\"customerCelPhone\" : \"942695492\",\r\n\t\"customerEmail\" : \"yngridjoan@gmail.com\" \r\n\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:4000/bootcoinCustomer",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "4000",
+									"path": [
+										"bootcoinCustomer"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Exchange",
+					"item": [
+						{
+							"name": "publishExchange",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n\t\"customerId\":\"63688fdf59ea95513d7a2211\",\r\n\t\"walletExchangePublishId\":\"63688fdfb691dc3b9d78be8e\",\r\n\t\"exchangePublishQuantityAllowed\":25,\r\n\t\"exchangePublishAccount\":\"123456\",\r\n\t\"exchangePublishTypePayId\":\"T\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:4003/bootcoinExchange/publishExchange",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "4003",
+									"path": [
+										"bootcoinExchange",
+										"publishExchange"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "findPublishees",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:4003/bootcoinExchange/findPublishees",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "4003",
+									"path": [
+										"bootcoinExchange",
+										"findPublishees"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "applyForExchange",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "\t{\r\n    \"exchangeId\":\"6368a101eba5763378dc3bba\",\r\n\t\"walletExchangeApplyForId\":\"63689641b691dc3b9d78be91\",\r\n\t\"exchangeApplyForBank\":\"1\",\r\n\t\"exchangeApplyForAccount\":\"123456\",\r\n\t\"exchangeApplyForAmount\":100\r\n    }",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:4003/bootcoinExchange/applyForExchange",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "4003",
+									"path": [
+										"bootcoinExchange",
+										"applyForExchange"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "acceptExchange",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "\t{\r\n    \"exchangeId\":\"6368a101eba5763378dc3bba\",\r\n\t\"walletExchangeApplyForId\":\"63689641b691dc3b9d78be91\",\r\n\t\"exchangeApplyForBank\":\"1\",\r\n\t\"exchangeApplyForAccount\":\"123456\",\r\n\t\"exchangeApplyForAmount\":100\r\n    }",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:4003/bootcoinExchange/applyForExchange",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "4003",
+									"path": [
+										"bootcoinExchange",
+										"applyForExchange"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Bank",
+			"item": [
+				{
+					"name": "Product",
+					"item": [
+						{
+							"name": "CuentaAhorro",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n\r\n    \"productId\": \"1\",\r\n\t\"productName\": \"Cuenta de Ahorro\",\r\n    \"productState\": \"A\",\r\n    \"clientRules\":[\r\n        {\r\n            \"customerTypeId\":\"1\",\r\n            \"customerCategoryId\":\"1\",\r\n            \"clientRuleState\":\"A\",\r\n           \r\n            \"businessRules\":[\r\n                {\"actionId\":\"1\",\"ruleId\":\"1\",\"ruleName\":\"maxQuantityProduct\",\"ruleValue\":\"1\",\"ruleState\":\"A\"},\r\n                {\"actionId\":\"1\",\"ruleId\":\"2\",\"ruleName\":\"minCreditCard\",\"ruleValue\":\"0\",\"ruleState\":\"A\"},\r\n                {\"actionId\":\"1\",\"ruleId\":\"3\",\"ruleName\":\"maxCreditDebt\",\"ruleValue\":\"0\",\"ruleState\":\"A\"},\r\n                {\"actionId\":\"2\",\"ruleId\":\"1\",\"ruleName\":\"maxMovement\",\"ruleValue\":\"3\",\"ruleState\":\"A\"},\r\n                {\"actionId\":\"2\",\"ruleId\":\"2\",\"ruleName\":\"comissionMaxMovement\",\"ruleValue\":\"1\",\"ruleState\":\"A\"},\r\n                {\"actionId\":\"2\",\"ruleId\":\"3\",\"ruleName\":\"allowDeposit\",\"ruleValue\":\"S\",\"ruleState\":\"A\"},\r\n                {\"actionId\":\"2\",\"ruleId\":\"4\",\"ruleName\":\"allowWithdrawal\",\"ruleValue\":\"S\",\"ruleState\":\"A\"}\r\n            ]\r\n        },\r\n        {\r\n            \"customerTypeId\":\"1\",\r\n            \"customerCategoryId\":\"2\",\r\n            \"clientRuleState\":\"A\",\r\n           \r\n            \"businessRules\":[\r\n                {\"actionId\":\"1\",\"ruleId\":\"1\",\"ruleName\":\"maxQuantityProduct\",\"ruleValue\":\"1\",\"ruleState\":\"A\"},\r\n                {\"actionId\":\"1\",\"ruleId\":\"2\",\"ruleName\":\"minCreditCard\",\"ruleValue\":\"1\",\"ruleState\":\"A\"},\r\n                {\"actionId\":\"1\",\"ruleId\":\"3\",\"ruleName\":\"maxCreditDebt\",\"ruleValue\":\"0\",\"ruleState\":\"A\"},\r\n                {\"actionId\":\"2\",\"ruleId\":\"1\",\"ruleName\":\"maxMovement\",\"ruleValue\":\"3\",\"ruleState\":\"A\"},\r\n                {\"actionId\":\"2\",\"ruleId\":\"2\",\"ruleName\":\"comissionMaxMovement\",\"ruleValue\":\"1\",\"ruleState\":\"A\"},\r\n                {\"actionId\":\"2\",\"ruleId\":\"3\",\"ruleName\":\"allowDeposit\",\"ruleValue\":\"S\",\"ruleState\":\"A\"},\r\n                {\"actionId\":\"2\",\"ruleId\":\"4\",\"ruleName\":\"allowWithdrawal\",\"ruleValue\":\"S\",\"ruleState\":\"A\"}\r\n            ]\r\n        }\r\n\r\n    ]\r\n\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8100/product",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8100",
+									"path": [
+										"product"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "CuentaCorriente",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n\r\n    \"productId\": \"2\",\r\n\t\"productName\": \"Cuenta corriente\",\r\n    \"productState\": \"A\",\r\n    \"clientRules\":[\r\n        {\r\n            \"customerTypeId\":\"1\",\r\n            \"customerCategoryId\":\"1\",\r\n            \"clientRuleState\":\"A\",\r\n            \"businessRules\":[\r\n                {\"actionId\":\"1\",\"ruleId\":\"1\",\"ruleName\":\"maxQuantityProduct\",\"ruleValue\":\"1\",\"ruleState\":\"A\"},\r\n                {\"actionId\":\"1\",\"ruleId\":\"2\",\"ruleName\":\"minCreditCard\",\"ruleValue\":\"0\",\"ruleState\":\"A\"},\r\n                {\"actionId\":\"1\",\"ruleId\":\"3\",\"ruleName\":\"maxCreditDebt\",\"ruleValue\":\"0\",\"ruleState\":\"A\"},\r\n                {\"actionId\":\"2\",\"ruleId\":\"1\",\"ruleName\":\"maxMovement\",\"ruleValue\":\"*\",\"ruleState\":\"A\"},\r\n                {\"actionId\":\"2\",\"ruleId\":\"2\",\"ruleName\":\"comissionMaxMovement\",\"ruleValue\":\"0.00\",\"ruleState\":\"A\"},\r\n                {\"actionId\":\"2\",\"ruleId\":\"3\",\"ruleName\":\"allowDeposit\",\"ruleValue\":\"S\",\"ruleState\":\"A\"},\r\n                {\"actionId\":\"2\",\"ruleId\":\"4\",\"ruleName\":\"allowWithdrawal\",\"ruleValue\":\"S\",\"ruleState\":\"A\"}\r\n                \r\n            ]\r\n        },\r\n        {\r\n            \"customerTypeId\":\"1\",\r\n            \"customerCategoryId\":\"2\",\r\n            \"clientRuleState\":\"A\",\r\n            \"businessRules\":[\r\n                {\"actionId\":\"1\",\"ruleId\":\"1\",\"ruleName\":\"maxQuantityProduct\",\"ruleValue\":\"1\",\"ruleState\":\"A\"},\r\n                {\"actionId\":\"1\",\"ruleId\":\"2\",\"ruleName\":\"minCreditCard\",\"ruleValue\":\"0\",\"ruleState\":\"A\"},\r\n                {\"actionId\":\"1\",\"ruleId\":\"3\",\"ruleName\":\"maxCreditDebt\",\"ruleValue\":\"0\",\"ruleState\":\"A\"},\r\n                {\"actionId\":\"2\",\"ruleId\":\"1\",\"ruleName\":\"maxMovement\",\"ruleValue\":\"*\",\"ruleState\":\"A\"},\r\n                {\"actionId\":\"2\",\"ruleId\":\"2\",\"ruleName\":\"comissionMaxMovement\",\"ruleValue\":\"0.00\",\"ruleState\":\"A\"},\r\n                {\"actionId\":\"2\",\"ruleId\":\"3\",\"ruleName\":\"allowDeposit\",\"ruleValue\":\"S\",\"ruleState\":\"A\"},\r\n                {\"actionId\":\"2\",\"ruleId\":\"4\",\"ruleName\":\"allowWithdrawal\",\"ruleValue\":\"S\",\"ruleState\":\"A\"}\r\n            ]\r\n        },\r\n        {\r\n            \"customerTypeId\":\"2\",\r\n            \"customerCategoryId\":\"3\",\r\n            \"clientRuleState\":\"A\",\r\n            \"businessRules\":[\r\n                {\"actionId\":\"1\",\"ruleId\":\"1\",\"ruleName\":\"maxQuantityProduct\",\"ruleValue\":\"*\",\"ruleState\":\"A\"},\r\n                {\"actionId\":\"1\",\"ruleId\":\"2\",\"ruleName\":\"minCreditCard\",\"ruleValue\":\"0\",\"ruleState\":\"A\"},\r\n                {\"actionId\":\"1\",\"ruleId\":\"3\",\"ruleName\":\"maxCreditDebt\",\"ruleValue\":\"0\",\"ruleState\":\"A\"},\r\n                {\"actionId\":\"2\",\"ruleId\":\"1\",\"ruleName\":\"maxMovement\",\"ruleValue\":\"*\",\"ruleState\":\"A\"},\r\n                {\"actionId\":\"2\",\"ruleId\":\"2\",\"ruleName\":\"comissionMaxMovement\",\"ruleValue\":\"0.00\",\"ruleState\":\"A\"},\r\n                {\"actionId\":\"2\",\"ruleId\":\"3\",\"ruleName\":\"allowDeposit\",\"ruleValue\":\"S\",\"ruleState\":\"A\"},\r\n                {\"actionId\":\"2\",\"ruleId\":\"4\",\"ruleName\":\"allowWithdrawal\",\"ruleValue\":\"S\",\"ruleState\":\"A\"}\r\n            ]\r\n        },\r\n        {\r\n            \"customerTypeId\":\"2\",\r\n            \"customerCategoryId\":\"4\",\r\n            \"clientRuleState\":\"A\",\r\n            \"businessRules\":[\r\n                {\"actionId\":\"1\",\"ruleId\":\"1\",\"ruleName\":\"maxQuantityProduct\",\"ruleValue\":\"*\",\"ruleState\":\"A\"},\r\n                {\"actionId\":\"1\",\"ruleId\":\"2\",\"ruleName\":\"minCreditCard\",\"ruleValue\":\"1\",\"ruleState\":\"A\"},\r\n                {\"actionId\":\"1\",\"ruleId\":\"3\",\"ruleName\":\"maxCreditDebt\",\"ruleValue\":\"0\",\"ruleState\":\"A\"},\r\n                {\"actionId\":\"2\",\"ruleId\":\"1\",\"ruleName\":\"maxMovement\",\"ruleValue\":\"*\",\"ruleState\":\"A\"},\r\n                {\"actionId\":\"2\",\"ruleId\":\"2\",\"ruleName\":\"comissionMaxMovement\",\"ruleValue\":\"0.00\",\"ruleState\":\"A\"},\r\n                {\"actionId\":\"2\",\"ruleId\":\"3\",\"ruleName\":\"allowDeposit\",\"ruleValue\":\"S\",\"ruleState\":\"A\"},\r\n                {\"actionId\":\"2\",\"ruleId\":\"4\",\"ruleName\":\"allowWithdrawal\",\"ruleValue\":\"S\",\"ruleState\":\"A\"}\r\n            ]\r\n        }\r\n\r\n    ]\r\n\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/product",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"product"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "CuentaPlazo",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n\r\n    \"productId\": \"3\",\r\n\t\"productName\": \"Cuenta Plazo Fijo\",\r\n    \"productState\": \"A\",\r\n    \"clientRules\":[\r\n        {\r\n            \"customerTypeId\":\"1\",\r\n            \"customerCategoryId\":\"1\",\r\n            \"clientRuleState\":\"A\",\r\n            \"businessRules\":[\r\n                {\"actionId\":\"1\",\"ruleId\":\"1\",\"ruleName\":\"maxQuantityProduct\",\"ruleValue\":\"1\",\"ruleState\":\"A\"},\r\n                {\"actionId\":\"1\",\"ruleId\":\"2\",\"ruleName\":\"minCreditCard\",\"ruleValue\":\"0\",\"ruleState\":\"A\"},\r\n                {\"actionId\":\"1\",\"ruleId\":\"3\",\"ruleName\":\"maxCreditDebt\",\"ruleValue\":\"0\",\"ruleState\":\"A\"},\r\n                {\"actionId\":\"2\",\"ruleId\":\"1\",\"ruleName\":\"maxMovement\",\"ruleValue\":\"1\",\"ruleState\":\"A\"},\r\n                {\"actionId\":\"2\",\"ruleId\":\"2\",\"ruleName\":\"comissionMaxMovement\",\"ruleValue\":\"0.01\",\"ruleState\":\"A\"},\r\n                {\"actionId\":\"2\",\"ruleId\":\"3\",\"ruleName\":\"allowDeposit\",\"ruleValue\":\"S\",\"ruleState\":\"A\"},\r\n                {\"actionId\":\"2\",\"ruleId\":\"4\",\"ruleName\":\"allowWithdrawal\",\"ruleValue\":\"S\",\"ruleState\":\"A\"}\r\n            ]\r\n        },\r\n        {\r\n            \"customerTypeId\":\"1\",\r\n            \"customerCategoryId\":\"2\",\r\n            \"clientRuleState\":\"A\",\r\n            \"businessRules\":[\r\n                {\"actionId\":\"1\",\"ruleId\":\"1\",\"ruleName\":\"maxQuantityProduct\",\"ruleValue\":\"1\",\"ruleState\":\"A\"},\r\n                {\"actionId\":\"1\",\"ruleId\":\"2\",\"ruleName\":\"minCreditCard\",\"ruleValue\":\"0\",\"ruleState\":\"A\"},\r\n                {\"actionId\":\"1\",\"ruleId\":\"3\",\"ruleName\":\"maxCreditDebt\",\"ruleValue\":\"0\",\"ruleState\":\"A\"},\r\n                {\"actionId\":\"2\",\"ruleId\":\"1\",\"ruleName\":\"maxMovement\",\"ruleValue\":\"1\",\"ruleState\":\"A\"},\r\n                {\"actionId\":\"2\",\"ruleId\":\"2\",\"ruleName\":\"comissionMaxMovement\",\"ruleValue\":\"0.01\",\"ruleState\":\"A\"},\r\n                {\"actionId\":\"2\",\"ruleId\":\"3\",\"ruleName\":\"allowDeposit\",\"ruleValue\":\"S\",\"ruleState\":\"A\"},\r\n                {\"actionId\":\"2\",\"ruleId\":\"4\",\"ruleName\":\"allowWithdrawal\",\"ruleValue\":\"S\",\"ruleState\":\"A\"}\r\n            ]\r\n        }\r\n\r\n    ]\r\n\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/product",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"product"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "findBusinessRules",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/product/businessRules/1/1/1/1",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"product",
+										"businessRules",
+										"1",
+										"1",
+										"1",
+										"1"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Account",
+					"item": [
+						{
+							"name": "CuentaAhorroClientePersonal",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n\r\n\t\"accountNumber\":\"123456\",\r\n\t\"customerId\":\"1\",\r\n\t\"productId\":\"1\",\r\n\t\"customerTypeId\":\"1\",\r\n\t\"customerCategoryId\":\"1\",\r\n    \"accountCurrencyType\":\"S\",\r\n\t\"accountDayMovement\":\"-\",\r\n\t\"balance\":0,\r\n    \"accountState\": \"A\"\r\n\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8101/account",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8101",
+									"path": [
+										"account"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "CuentaAhorroClientePersonalVip",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n\r\n\t\"accountNumber\":\"123457\",\r\n\t\"customerId\":\"2\",\r\n\t\"productId\":\"1\",\r\n\t\"customerTypeId\":\"1\",\r\n\t\"customerCategoryId\":\"2\",\r\n\t\"dayMovement\":\"-\",\r\n\t\"balance\":0\r\n\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8081/account",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8081",
+									"path": [
+										"account"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "CuentaCorrientePersonal",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n\r\n\t\"accountNumber\":\"123458\",\r\n\t\"customerId\":\"1\",\r\n\t\"productId\":\"2\",\r\n\t\"customerTypeId\":\"1\",\r\n\t\"customerCategoryId\":\"1\",\r\n\t\"dayMovement\":\"-\",\r\n\t\"balance\":0\r\n\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8081/account",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8081",
+									"path": [
+										"account"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "CuentaPlazoFijoPersonal",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n\r\n\t\"accountNumber\":\"123459\",\r\n\t\"customerId\":\"1\",\r\n\t\"productId\":\"3\",\r\n\t\"customerTypeId\":\"1\",\r\n\t\"customerCategoryId\":\"1\",\r\n\t\"dayMovement\":\"6\",\r\n\t\"balance\":0\r\n\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8081/account",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8081",
+									"path": [
+										"account"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "CuentaCorrienteEmpresarial",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n\r\n\t\"accountNumber\":\"123460\",\r\n\t\"customerId\":\"3\",\r\n\t\"productId\":\"2\",\r\n\t\"customerTypeId\":\"2\",\r\n\t\"customerCategoryId\":\"3\",\r\n\t\"dayMovement\":\"-\",\r\n\t\"balance\":0\r\n\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8081/account",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8081",
+									"path": [
+										"account"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "CuentaCorrienteEmpresarialPYME",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n\r\n\t\"accountNumber\":\"123464\",\r\n\t\"customerId\":\"3\",\r\n\t\"productId\":\"2\",\r\n\t\"customerTypeId\":\"2\",\r\n\t\"customerCategoryId\":\"3\",\r\n\t\"dayMovement\":\"-\",\r\n\t\"balance\":0\r\n\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8081/account",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8081",
+									"path": [
+										"account"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "ValidateMaxQuantityClientePersonal",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n\r\n\t\"accountNumber\":\"123462\",\r\n\t\"customerId\":\"1\",\r\n\t\"productId\":\"3\",\r\n\t\"customerTypeId\":\"1\",\r\n\t\"customerCategoryId\":\"1\",\r\n\t\"dayMovement\":\"-\",\r\n\t\"balance\":0\r\n\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8081/account",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8081",
+									"path": [
+										"account"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "ValidateCuentaAhorroClienteEmpresarial",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n\r\n\t\"accountNumber\":\"123480\",\r\n\t\"customerId\":\"3\",\r\n\t\"productId\":\"1\",\r\n\t\"customerTypeId\":\"2\",\r\n\t\"customerCategoryId\":\"3\",\r\n\t\"dayMovement\":\"-\",\r\n\t\"balance\":0\r\n\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8081/account",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8081",
+									"path": [
+										"account"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "New Request",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8081/account/123456",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8081",
+									"path": [
+										"account",
+										"123456"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "New Request",
+							"request": {
+								"method": "PATCH",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n\r\n\t\"accountNumber\":\"123456\",\r\n\t\"accountBalance\":20,\r\n    \"accountTransactionNumber\":10\r\n\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8081/account",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8081",
+									"path": [
+										"account"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "New Request Copy",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8101/account/findAccountById/63687b16160f7911cad638d",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8101",
+									"path": [
+										"account",
+										"findAccountById",
+										"63687b16160f7911cad638d"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "DebitCard",
+					"item": [
+						{
+							"name": "New Request",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n\r\n    \r\n\t\"debitCardNumber\":\"4565-8787-4187-8788\",\r\n\t\"debitCardExpirationDate\":\"10/25\",\r\n\t\"debitCardVerificationCode\":\"333\",\r\n\t\"accountIdMainAssociated\":\"63687b16160f7911cad638dd\"\r\n\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8103/debitCard",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8103",
+									"path": [
+										"debitCard"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		}
+	]
+}
